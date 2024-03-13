@@ -1,10 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BannerController;
 
-Route::get('/', function () {
-    return view('home');
-})->name('Home');
+Route::get('/', [BannerController::class, 'index'])->name('Home');
 
 Route::get('/menu', function () {
     return view('menu');

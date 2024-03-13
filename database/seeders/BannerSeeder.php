@@ -16,7 +16,7 @@ class BannerSeeder extends Seeder
         $banners = [
             [
                 'title' => 'Fast Food Restaurant',
-                'image' => 'imsges/hero-bg.jpg',
+                'image' => 'images/hero-bg.jpg',
                 'description' => 'Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.',
             ],
         ];
