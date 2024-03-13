@@ -20,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Blade::component('nav', \App\View\Components\HeaderComponent::class);
+        Blade::component('header', \App\View\Components\HeaderComponent::class);
+        Blade::component('footer', \App\View\Components\FooterComponent::class);
     }
 }
