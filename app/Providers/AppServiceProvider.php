@@ -24,5 +24,6 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('footer', \App\View\Components\FooterComponent::class);
         Blade::component('food', \App\View\Components\FoodComponent::class);
         Blade::component('about', \App\View\Components\AboutComponent::class);
+        Blade::component('book', \App\View\Components\BookComponent::class);
     }
 }
