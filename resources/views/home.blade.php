@@ -38,9 +38,7 @@
     <body>
         <div class="hero_area">
             <div class="bg-box">
-                @foreach($banners as $banner)
-                    <img src="{{ asset($banner->image) }}" alt="{{ $banner->image }}">
-                @endforeach
+                <img src="{{ asset('images/hero-bg.jpg') }}" alt="images/hero-bg.jpg">
             </div>
             <!-- header section strats -->
             <x-header />
@@ -55,14 +53,14 @@
                                     <div class="col-md-7 col-lg-6 ">
                                         <div class="detail-box">
                                             <h1>
-                                                @foreach($banners as $banner)
-                                                    {{ $banner->title }}
-                                                @endforeach
+                                                @if(isset($banners[0]))
+                                                    {{ $banners[0]->title }}
+                                                @endif
                                             </h1>
                                             <p>
-                                                @foreach($banners as $banner)
-                                                    {{ $banner->description }}
-                                                @endforeach
+                                                @if(isset($banners[0]))
+                                                    {{ $banners[0]->description }}
+                                                @endif
                                             </p>
                                             <div class="btn-box">
                                                 <a href="{{ route('Menu') }}" class="btn1">
@@ -74,22 +72,23 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="carousel-item ">
+                        <div class="carousel-item ">
                             <div class="container ">
                                 <div class="row">
                                     <div class="col-md-7 col-lg-6 ">
                                         <div class="detail-box">
                                             <h1>
-                                                Fast Food Restaurant
+                                                @if(isset($banners[1]))
+                                                    {{ $banners[1]->title }}
+                                                @endif
                                             </h1>
                                             <p>
-                                                Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente
-                                                ad mollitia laborum quam quisquam esse error unde. Tempora ex
-                                                doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus
-                                                libero ipsam.
+                                                @if(isset($banners[1]))
+                                                    {{ $banners[1]->description }}
+                                                @endif
                                             </p>
                                             <div class="btn-box">
-                                                <a href="" class="btn1">
+                                                <a href="{{ route('Menu') }}" class="btn1">
                                                     Order Now
                                                 </a>
                                             </div>
@@ -97,23 +96,24 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
-                        <!-- <div class="carousel-item">
+                        </div>
+                        <div class="carousel-item ">
                             <div class="container ">
                                 <div class="row">
                                     <div class="col-md-7 col-lg-6 ">
                                         <div class="detail-box">
                                             <h1>
-                                                Fast Food Restaurant
+                                                @if(isset($banners[2]))
+                                                    {{ $banners[2]->title }}
+                                                @endif
                                             </h1>
                                             <p>
-                                                Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente
-                                                ad mollitia laborum quam quisquam esse error unde. Tempora ex
-                                                doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus
-                                                libero ipsam.
+                                                @if(isset($banners[2]))
+                                                    {{ $banners[2]->description }}
+                                                @endif
                                             </p>
                                             <div class="btn-box">
-                                                <a href="" class="btn1">
+                                                <a href="{{ route('Menu') }}" class="btn1">
                                                     Order Now
                                                 </a>
                                             </div>
@@ -121,7 +121,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="container">
                         <ol class="carousel-indicators">
