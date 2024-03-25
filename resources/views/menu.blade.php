@@ -48,7 +48,8 @@
         </div>
 
         <!-- food section -->
-        <x-food />
+        <x-food :burgerMenus="$burgerMenus" :pizzaMenus="$pizzaMenus" :pastasMenus="$pastasMenus"
+            :friesMenus="$friesMenus" />
         <!-- end food section -->
 
         <!-- footer section -->
