@@ -54,12 +54,12 @@
                                         <div class="detail-box">
                                             <h1>
                                                 @if(isset($banners[0]))
-                                                    {{ $banners[0]->title }}
+                                                {{ $banners[0]->title }}
                                                 @endif
                                             </h1>
                                             <p>
                                                 @if(isset($banners[0]))
-                                                    {{ $banners[0]->description }}
+                                                {{ $banners[0]->description }}
                                                 @endif
                                             </p>
                                             <div class="btn-box">
@@ -79,12 +79,12 @@
                                         <div class="detail-box">
                                             <h1>
                                                 @if(isset($banners[1]))
-                                                    {{ $banners[1]->title }}
+                                                {{ $banners[1]->title }}
                                                 @endif
                                             </h1>
                                             <p>
                                                 @if(isset($banners[1]))
-                                                    {{ $banners[1]->description }}
+                                                {{ $banners[1]->description }}
                                                 @endif
                                             </p>
                                             <div class="btn-box">
@@ -104,12 +104,12 @@
                                         <div class="detail-box">
                                             <h1>
                                                 @if(isset($banners[2]))
-                                                    {{ $banners[2]->title }}
+                                                {{ $banners[2]->title }}
                                                 @endif
                                             </h1>
                                             <p>
                                                 @if(isset($banners[2]))
-                                                    {{ $banners[2]->description }}
+                                                {{ $banners[2]->description }}
                                                 @endif
                                             </p>
                                             <div class="btn-box">
@@ -293,7 +293,8 @@
         <!-- end offer section -->
 
         <!-- food section -->
-        <x-food />
+        <x-food :burgerMenus="$burgerMenus" :pizzaMenus="$pizzaMenus" :pastasMenus="$pastasMenus"
+            :friesMenus="$friesMenus" />
         <!-- end food section -->
 
         <!-- about section -->
@@ -330,8 +331,7 @@
                                     </p>
                                 </div>
                                 <div class="img-box">
-                                    <img src="{{ asset('images/client1.jpg') }}" alt=""
-                                        class="box-img">
+                                    <img src="{{ asset('images/client1.jpg') }}" alt="" class="box-img">
                                 </div>
                             </div>
                         </div>
@@ -350,8 +350,7 @@
                                     </p>
                                 </div>
                                 <div class="img-box">
-                                    <img src="{{ asset('images/client2.jpg') }}" alt=""
-                                        class="box-img">
+                                    <img src="{{ asset('images/client2.jpg') }}" alt="" class="box-img">
                                 </div>
                             </div>
                         </div>
