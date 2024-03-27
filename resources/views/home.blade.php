@@ -298,7 +298,7 @@
         <!-- end food section -->
 
         <!-- about section -->
-        <x-about />
+        <x-about :abouts="$abouts" />
         <!-- end about section -->
 
         <!-- book section -->

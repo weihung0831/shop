@@ -48,7 +48,7 @@
         </div>
 
         <!-- about section -->
-        <x-about />
+        <x-about :abouts="$abouts" />
         <!-- end about section -->
 
         <!-- footer section -->
