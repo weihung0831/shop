@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Menu;
 
-class BannerController extends Controller
+class HomeController extends Controller
 {
     public function index()
     {
