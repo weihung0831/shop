@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Menu;
 use App\Models\About;
+use App\Models\ClientFeedback;
 
 class HomeController extends Controller
 {
@@ -17,6 +18,7 @@ class HomeController extends Controller
         $pastasMenus = Menu::where('category', 'pasta')->get();
         $friesMenus = Menu::where('category', 'fries')->get();
         $abouts = About::all();
-        return view('home', compact('banners', 'burgerMenus', 'pizzaMenus', 'pastasMenus', 'friesMenus', 'abouts'));
+        $clientFeedbacks = ClientFeedback::all();
+        return view('home', compact('banners', 'burgerMenus', 'pizzaMenus', 'pastasMenus', 'friesMenus', 'abouts', 'clientFeedbacks'));
     }
 }

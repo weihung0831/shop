@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <!-- Basic -->
         <meta charset="utf-8" />
@@ -306,7 +305,6 @@
         <!-- end book section -->
 
         <!-- client section -->
-
         <section class="client_section layout_padding-bottom">
             <div class="container">
                 <div class="heading_container heading_center psudo_white_primary mb_45">
@@ -320,14 +318,13 @@
                             <div class="box">
                                 <div class="detail-box">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                        {{ $clientFeedbacks->first()->description }}
                                     </p>
                                     <h6>
-                                        Moana Michell
+                                        {{ $clientFeedbacks->first()->big_name }}
                                     </h6>
                                     <p>
-                                        magna aliqua
+                                        {{ $clientFeedbacks->first()->small_name }}
                                     </p>
                                 </div>
                                 <div class="img-box">
@@ -339,14 +336,13 @@
                             <div class="box">
                                 <div class="detail-box">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                        {{ $clientFeedbacks->skip(1)->first()->description }}
                                     </p>
                                     <h6>
-                                        Mike Hamell
+                                        {{ $clientFeedbacks->skip(1)->first()->big_name }}
                                     </h6>
                                     <p>
-                                        magna aliqua
+                                        {{ $clientFeedbacks->skip(1)->first()->small_name }}
                                     </p>
                                 </div>
                                 <div class="img-box">
@@ -358,7 +354,6 @@
                 </div>
             </div>
         </section>
-
         <!-- end client section -->
 
         <!-- footer section -->
@@ -388,7 +383,5 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
         </script>
         <!-- End Google Map -->
-
     </body>
-
 </html>
